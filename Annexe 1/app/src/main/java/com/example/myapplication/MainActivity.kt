@@ -40,6 +40,7 @@ class MainActivity : AppCompatActivity() {
         boutonAjouter.setOnClickListener(ec)
         boutonAfficher.setOnClickListener(ec)
         boutonQuitter.setOnClickListener(ec)
+        
     }
 
     inner class Ecouteur : View.OnClickListener {
