@@ -53,11 +53,22 @@ class AjouterActivity : AppCompatActivity() {
         test.setOnClickListener(ec);*/
     }
 
+
+    override fun onStop() {
+        super.onStop()
+        try {
+            SingletonMemo.getInstance(applicationContext).serializerListe();
+        }
+        catch (e:Exception){
+            e.printStackTrace();
+        }
+    }
+
     inner  class Ecouteur: OnClickListener, OnDateSetListener{
         override fun onClick(v: View?) {
             if (v === test) {
                 var texteMemo = champAjout.text.toString();
-                SingletonMemo.getInstance(this@AjouterActivity).ajouteMemo(Memo(texteMemo,selectedDate))
+                SingletonMemo.getInstance(applicationContext).ajouteMemo(Memo(texteMemo,selectedDate))
             }
             else {
                 val d : DatePickerDialog = DatePickerDialog(this@AjouterActivity);

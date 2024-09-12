@@ -40,6 +40,14 @@ class MainActivity : AppCompatActivity() {
         boutonAjouter.setOnClickListener(ec)
         boutonAfficher.setOnClickListener(ec)
         boutonQuitter.setOnClickListener(ec)
+
+        try {
+            val ref = SingletonMemo.getInstance(applicationContext);
+            val temp = ref.deSerializerListe();
+            ref.listeMemo = temp;
+        } catch(e:Exception) {
+            e.printStackTrace();
+        }
         
     }
 
