@@ -66,7 +66,7 @@ class MainActivity : AppCompatActivity() {
         val fos: FileOutputStream = openFileOutput("fichier.ser", MODE_PRIVATE)
         val oos = ObjectOutputStream(fos)
 
-        
+
         listeDeSeek.clear()
         listeDeSeek.add(seekBarUn.progress)
         listeDeSeek.add(seekBarDeux.progress)
