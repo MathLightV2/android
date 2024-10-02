@@ -17,6 +17,7 @@ class MainActivity : AppCompatActivity() {
 
     lateinit var dent1: LinearLayout
     lateinit var dent2: LinearLayout
+    var dent = Dent
     var dents: List<Dent> = emptyList() // Initialize as empty list
 
     override fun onCreate(savedInstanceState: Bundle?) {
