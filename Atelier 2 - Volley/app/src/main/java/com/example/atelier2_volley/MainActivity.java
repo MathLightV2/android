@@ -71,8 +71,8 @@ public class MainActivity extends AppCompatActivity {
          */
 
 
-        /*
-        // AVEC JSONOBJECTREQUEST
+
+         //AVEC JSONOBJECTREQUEST
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest
                 (Request.Method.GET, url, null, response -> {
                     JSONArray tab = null;
@@ -100,13 +100,13 @@ public class MainActivity extends AppCompatActivity {
                         listView.setAdapter(adapter);
 
 
-                    } catch (JSONException e) {
+                    }  catch (JSONException e) {
                         throw new RuntimeException(e);
                     }
                 }, Throwable::printStackTrace);
 
         queue.add(jsonObjectRequest);
-*/
+
 
 
 

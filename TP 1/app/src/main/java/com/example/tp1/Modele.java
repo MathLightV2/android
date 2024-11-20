@@ -7,7 +7,9 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.google.gson.Gson;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Vector;
 
 public class Modele implements Sujet{
     private Context context;
@@ -17,10 +19,10 @@ public class Modele implements Sujet{
     public Modele(Context context){
         this.context = context;
         requestQueue();
+        Vector v = new Vector()
     }
 
     private void requestQueue() {
-
         RequestQueue queue = Volley.newRequestQueue(context);
         String url = "https://api.jsonbin.io/v3/b/6723b430e41b4d34e44bfa92?meta=false";
 
@@ -28,6 +30,7 @@ public class Modele implements Sujet{
                 response -> {
                     Gson gson = new Gson();
                     ListeMusiques listeMusiques = gson.fromJson(response, ListeMusiques.class);
+
                     musiques = listeMusiques.getMusic();
                     avertirObservateurs();
 
